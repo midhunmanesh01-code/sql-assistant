@@ -5,7 +5,10 @@ Provides:
   - generate_sql()  : Generates a SQL query from a natural-language question.
   - explain_query() : Returns a short plain-English explanation of a SQL query.
 """
+from pathlib import Path
+from dotenv import load_dotenv
 
+load_dotenv(Path(__file__).resolve().parent / ".env")
 import os
 import re
 import textwrap
